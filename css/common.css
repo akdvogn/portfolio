@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+html{ height:100%; }
+body{ background:url(../images/background.jpg); height:100%; color:#632a22; overflow:hidden; }
+
+.flower{ height:53%; position:fixed; bottom:10px; z-index:9999; }
+
+nav{ text-align:right; padding:20px 32px 10px; }
+nav a{ margin-left:30px; color:#632a22; font-size:20px; }
+
+.contents{ padding:0 30px; overflow:hidden; height:90%; }
+.contents > .title{ float:left; height:100%; }
+
+@media screen and (max-width:1200px){
+	.contents > .title{ width:74.11px; }
+}
+
+@media screen and (max-height:700px){
+	.contents > .title{ height:630px; }
+}

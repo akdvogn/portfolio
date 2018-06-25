@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>포트폴리오_서지원</title>
+	<link rel="stylesheet" href="common/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<style>
+		
+		button{ background:transparent; border:none; outline:none; }
+
+		nav a:first-child{ text-decoration:line-through; }
+		
+		.contents > .project{ float:left; border:2px solid #8b3938; height:100%; box-sizing:border-box; overflow:hidden; position:relative; margin-left:30px; }
+		.contents > .project .btnG{ position:fixed; padding:20px; }
+		.contents > .project .btnG button{ font-size:18px; font-weight:normal; color:#333; }
+		.contents > .project .btnG .btnBack{ display:none; }
+		.contents > .project .btnG button:hover{ cursor:pointer; color:#fff; }
+
+		.contents > .project .slide ul{ height:500px; width:5000px; position:absolute; top:0; bottom:0; margin:auto;}
+		.contents > .project .slide li{ float:left; width:900px; height:500px; font-size:25px; margin:0 50px; }
+		.contents > .project .slide a{ color:#8b3938; }
+		.contents > .project .slide a:first-child img{ height:18px; padding-top:2px; }
+		.contents > .project .slide .image{ display:block; margin-top:10px; height:90%; }
+		.contents > .project .slide .image img{ height:100%; padding-top:2px; -webkit-filter:grayscale(100%);}
+		.contents > .project .slide .image img:hover{ -webkit-filter:grayscale(0%);}
+
+		.contents > .project .btnBar{ height:10px; width:900px; position:fixed; bottom:10%; }
+		.contents > .project .btnBar button{ height:10px; width:180px; }
+		.contents > .project .btnBar button:hover{ cursor:pointer; height:15px; }
+		.contents > .project .btnBar button:nth-child(1){ background-color:#000; }
+		.contents > .project .btnBar button:nth-child(2){ background-color:#2d3a55; }
+		.contents > .project .btnBar button:nth-child(3){ background-color:#ec9bac; }
+		.contents > .project .btnBar button:nth-child(4){ background-color:#00b2d5; }
+		.contents > .project .btnBar button:nth-child(5){ background-color:#fc8c0f }
+
+		.contents > .project .viewAll{ display:none; font-size:50px; margin-left:10%; margin-top:-50px; height:1000px; position:absolute; z-index:99; top:50%; }
+		.contents > .project .viewAll li{ height:100px; line-height:100px; }
+		.contents > .project .viewAll li:hover{ color:#fff; cursor:pointer; }
+		.contents > .project .viewAll li:first-child{ color:#fff; }
+
+		.oneImg{ display:block; position:absolute; right:10%; top:0; bottom:0; margin:auto 0; background-color:#fbb; width:30%; height:40%; display:none; }
+		@media screen and (max-width:1200px){
+			.contents > .project{ width:1035.89px; }
+
+		}
+
+		@media screen and (max-height:700px){
+			.contents > .project{ height:630px; }
+		}
+
+		.btnG{ display:none; }
+		
+
+	</style>
+	<script src="common/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="common/jquery.mousewheel.min.js"></script>
+</head>
+<body>
+	<img class="flower" src="images/flower.png" alt="title">
+	<nav>
+		<a href="index.html">Project</a>
+		<a href="about.html">About</a>
+	</nav>
+	<div class="contents">
+		<img class="title" src="images/title.png" alt="title">
+		<div class="project">
+			<div class="btnG"><button class="btnView">View All</button><button class="btnBack">Back</button></div>
+			<div class="slide">
+				<ul>
+					<li>
+						<a href="sub/sub_mac.html"><img src="images/icon.png" alt="icon">MAC - PROJECT TYPE1</a>
+						<a href="sub/sub_mac.html" class="image"><img src="images/bg4.jpg" alt="mac"></a>
+					</li>
+					<li>
+						<a href="sub/sub_bmw.html"><img src="images/icon.png" alt="icon">BMW - PROJECT TYPE2</a>
+						<a href="sub/sub_bmw.html" class="image"><img src="images/bg3.jpg" alt="bmw"></a>
+					</li>
+					<li>
+						<a href="sub/sub_blackpink.html"><img src="images/icon.png" alt="icon">BLACKPINK - PROJECT TYPE3</a>
+						<a href="sub/sub_blackpink.html" class="image"><img src="images/bg2.jpg" alt="blackpink"></a>
+					</li>
+					<li>
+						<a href="sub/sub_skyscanner.html"><img src="images/icon.png" alt="icon">SKYSCANNER - PROJECT TYPE4</a>
+						<a href="sub/sub_skyscanner.html" class="image"><img src="images/bg1.jpg" alt="skyscanner"></a>
+					</li>
+					<li>
+						<a href="#"><img src="images/icon.png" alt="icon">PROJECT NAME5 - PROJECT TYPE5</a>
+						<a href="#" class="image"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="btnBar"><button></button><button></button><button></button><button></button><button></button></div>
+			<ul class="viewAll">
+				<li>PROJECT NAME1 - PROJECT TYPE1</li>
+				<li>PROJECT NAME2 - PROJECT TYPE2</li>
+				<li>PROJECT NAME3 - PROJECT TYPE3</li>
+				<li>PROJECT NAME4 - PROJECT TYPE4</li>
+				<li>PROJECT NAME5 - PROJECT TYPE5</li>
+				<li>PROJECT NAME6 - PROJECT TYPE6</li>
+				<li>PROJECT NAME7 - PROJECT TYPE7</li>
+				<li>PROJECT NAME8 - PROJECT TYPE8</li>
+				<li>PROJECT NAME9 - PROJECT TYPE9</li>
+				<li>PROJECT NAME10 - PROJECT TYPE10</li>
+			</ul>
+			<a href="#" class="oneImg"></a>
+		</div>
+	</div>
+	<script>
+
+		var wid = $(window).width()-$('.title').width()-90;
+
+		$('.slide').css('padding-left',(wid-1000)/2);
+		$('.slide ul').css('padding-right',(wid-1000)/2);
+		$('.btnBar').css('padding-left',(wid-1000)/2+50);
+		
+		$(window).resize(function(){
+			var wid = $(window).width()-$('.title').width()-90;
+			$('.project').css('width',wid);
+			$('.slide').css('padding-left',(wid-1000)/2);
+			$('.slide ul').css('padding-right',(wid-1000)/2);
+			$('.btnBar').css('padding-left',(wid-1000)/2+50);
+
+		if(wid<=1035){
+			$('.project').css('width','1035px');
+			$('.contents').css('width','1200px');
+		}else{
+			var w = $(window).width();
+			$('.contents').css('width',w);
+		}
+
+		});
+		if(wid<=1035){
+			$('.project').css('width','1035px');
+			$('.contents').css('width','1200px');
+
+		}else{
+			$('.project').css('width',wid);
+		}
+
+		
+		$('.project').mousewheel(function(e, delta) {
+			
+			
+        	if(delta > 0) {//마우스 휠을 올렸을 때
+				$(".project").stop().animate({"scrollLeft":'-=1000px'},1000);
+				
+			}else if(delta < 0) {//마우스 휠을 내렸을 때
+				$(".project").stop().animate({"scrollLeft":'+=1000px'},1000);
+			}
+    	});
+
+
+		$('.btnBar button').each(function(i){
+			$(this).click(function(){
+				
+				$('.project').stop().animate({scrollLeft:1000*i},1000);
+			});
+		});
+
+		
+		// $('.btnView').click(function(){
+		// 	$('.slide').hide();
+		// 	$('.btnBar').hide();
+		// 	$('.viewAll').show();
+		// 	$('.oneImg').show();
+		// 	$(this).hide();
+		// 	$('.btnBack').show();
+		// 	a=8;
+		// 	b=0;
+		// 	$('.viewAll').css({'margin-top':'0'});
+		// 	$('.viewAll li').css('color','#632a22');
+		// 	$('.viewAll li').eq(0).css('color','#fff');
+		// });
+		// $('.btnBack').click(function(){
+		// 	$('.slide').show();
+		// 	$('.btnBar').show();
+		// 	$('.viewAll').hide();
+		// 	$('.oneImg').hide();
+		// 	$(this).hide();
+		// 	$('.btnView').show();
+			
+		// 	$('.slide').css({'margin-left':'0'});
+		// });
+
+
+		// $('.viewAll li').each(function(i){
+		// 	$(this).click(function(){
+		// 		b=i;
+		// 		$('.viewAll').stop().animate({'margin-top':(-100*i)-50},1000);
+		// 		$('.viewAll li').css('color','#632a22');
+		// 		$('.viewAll li').eq(i).css('color','#fff');
+
+		// 	});
+		// });
+		// $('.project').mousewheel(function(e, delta) {
+  //       	this.scrollTop -= (delta * 150);
+  //       	e.preventDefault();
+  //   	});
+		
+		
+
+
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>skyscanner</title>
+<link rel="stylesheet" href="../common/reset.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Gothic" type="text/css">
+<link rel="stylesheet" href="css/skyscanner.css" type="text/css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="../common/jquery.mousewheel.min.js"></script>
+<script>$(function(){
+	var ht = $('article').innerHeight();
+	var n = 0;
+	var auto = setInterval(slide, 5000);
+
+	function slide(){ // 선언함수 - 호출할 때마다 실행
+		n = (n+1)%4; // 0,1,2,3
+		$('.imgG').animate({marginLeft:-100 * n + '%'});
+	}
+
+	//마우스 휠 이벤트
+	$("#content > *").mousewheel(function(event, delta){
+		if(delta > 0) {//마우스 휠을 올렸을 때
+			var prev = $(this).prev().offset().top;
+			$("html, body").stop().animate({"scrollTop":prev},1000);
+			
+			
+		}else if(delta < 0) {//마우스 휠을 내렸을 때
+			var next = $(this).next().offset().top;
+			$("html, body").stop().animate({"scrollTop":next},1000);
+		}
+	});
+	$(".content2").mouseenter(function(){	
+			$('.kor').animate({right:130},1000);
+	});
+	$(".content3").mouseenter(function(){
+			$('.ita').animate({right:130},1000);
+	});
+	$(".content4").mouseenter(function(){
+			$('.usa').animate({right:160},1000);
+	});
+});</script>
+</head>
+
+<body>
+	<header>
+		<h1><a href="#"><img src="images/logo1.png" alt="상단 로고"></a></h1>
+		<nav>
+			<ul>
+				<li><a href="#">항공권</a></li>
+				<li><a href="https://www.skyscanner.co.kr/hotels" target="_blank">호텔</a></li>
+				<li><a href="../index.html" target="_blank">포트폴리오</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="content">
+		<div class="content1">
+			<ul class="imgG">
+				<li class="img1"></li>
+				<li class="img2"></li>
+				<li class="img3"></li>
+				<li class="img4"></li>
+			</ul>
+			<div class="search">
+				<p class="triptype">
+					<input type="radio" name="visit" value="왕복" checked="checked" id="return"><label for="return">왕복</label>
+					<input type="radio" name="visit" value="편도" id="oneway"><label for="oneway">편도</label>
+					<input type="radio" name="visit" value="다구간" id="multicity"><label for="multicity">다구간</label>
+				</p>
+				<div class="returnbox">
+					<div>출발지<i class="fas fa-chevron-down"></i></div>
+					<div>도착지<i class="fas fa-chevron-down"></i></div>
+					<div class="people"><i class="fas fa-chevron-down"></i><span>탑승객수</span><br>성인1</div>
+					<div>가는날<i class="fas fa-chevron-down"></i></div>
+					<div>오는날<i class="fas fa-chevron-down"></i></div>
+				</div>
+				<a href="https://www.skyscanner.co.kr/transport/flights-from/sela/?adults=1&children=0&adultsv2=1&childrenv2=&infants=0&cabinclass=economy&rtn=0&preferdirects=false&outboundaltsenabled=false&inboundaltsenabled=false&oym=1809&ref=home"><i class="fas fa-plane"></i>검색</a>
+			</div>
+		</div>
+		<section class="content2">
+			<article>
+				<div class="txt">
+					<h2>
+						가장 저렴한<br>
+						항공권<br>
+						검색 가능!<br>
+					</h2>
+					<p>
+						국내외 항공사와 여행사로부터 수백만개의<br>
+						항공권 가격을 비교하여 쉽고 빠르게 찾아드립니다.
+					</p>
+					<a href="https://www.skyscanner.co.kr/transport/flights-from/sela?adults=1&children=0&adultsv2=1&childrenv2=&infants=0&cabinclass=economy&rtn=0&preferdirects=false&outboundaltsenabled=false&inboundaltsenabled=false&oym=1808">Everywhere 검색 &gt;</a>
+				</div>
+				<img class="kor" src="images/kor.gif" alt="경복궁">
+			</article>
+		</section>
+		<section class="content3">
+			<article>
+				<div class="txt">
+					<h2>
+						추천<br>
+						여행지<br>
+						꿀팁 제공!<br>
+					</h2>
+					<p>
+						스카이스캐너에서 인기 있는 여행지를 추천 받고<br>
+						여행 관련 팁과 블로그 포스트를 확인하세요.
+					</p>
+					<a href="https://m.post.naver.com/my.nhn?memberNo=24328789">	스카이스캐너 블로그 &gt;</a>
+				</div>
+				<img class="ita" src="images/ita.gif" alt="콜로세움">
+			</article>
+		</section>
+		<section class="content4">
+			<article>
+				<div class="txt">
+					<h2>
+						간편하게<br>
+						원하는<br>
+						항공권 예약<br>
+					</h2>
+					<p>
+						전세계 5천만명이 사용하고 있는 스카이스캐너 앱을<br>
+						통해 언제 어디서든 간편하게 항공권을 예약하세요.
+					</p>
+					<a href="https://play.google.com/store/apps/	details?id=net.skyscanner.android.main">스카이스캐너 앱 다운로드 &gt;	</a>
+				</div>
+				<img class="usa" src="images/usa.gif" alt="자유의여신상">
+			</article>
+		</section>
+		<footer>
+			<div>
+				<div>
+					<h2><img src="images/logo2.png" alt="하단 로고"></h2>
+					<div class="store">
+						<p><i class="fab fa-google-play"></i>Google Play</p>
+						<p><i class="fab fa-apple"></i>App Store</p>
+					</div>
+				</div>
+				<div class="ftxt">
+					최고의<br>
+					여행 검색<br>
+					사이트
+				</div>
+				<p>
+					<span>Skyscanner</span><br>
+					Skyscanner Ltd Quartemile One 15 Lauriston Pl Edinbu UK<br>
+					영국 회사 번호 : 04217916<br>
+					<span>SeoJiwon</span><br>
+					전화번호 : 010-8332-8817<br>
+					이메일 : gfdsa8817@gmail.com
+				</p>
+				<p>&copy; Seojiwon</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

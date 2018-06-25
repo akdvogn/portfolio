@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>bmw</title>
+<link rel="stylesheet" href="../common/reset.css" type="text/css">
+<link rel="stylesheet" href="css/bmw.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" type="text/css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="../common/jquery.mousewheel.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<a href="#"><img src="images/logo.png" alt="bmw 로고"></a>
+		<nav>
+			<ul>
+				<li><a href="https://www.bmw.co.kr/ko/topics/insights/corporation/overview.html">COMPANY</a></li>
+				<li><a href="https://www.bmw.co.kr/ko/all-models.html">MODEL</a></li>
+				<li><a href="https://www.bmw.co.kr/ko/topics/insights/news/news-2018-6.html">NEWS</a></li>
+				<li><a href="https://www.bmw.co.kr/ko/topics/insights/careers/introduction.html">CAREERS</a></li>
+				<li><a href="https://www.bmw.co.kr/ko/topics/general/contact.html">CONTACT</a></li>
+				<li><a href="../index.html">PORTFOLIO</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="content">
+		<article id="video">
+			<figure class="bgImg"></figure>
+			<video preload autoplay loop >
+				<source src="images/bmw.mp4" type="video/mp4">
+			</video>
+			<div>
+				<h2>BMW</h2>
+				<p>BMW KOREA<br>
+				Sheer Driving Pleasure</p>
+			</div>
+		</article>
+		<article id="company">
+			<div>
+				<h2>COMPANY</h2>
+				<p>BMW 코리아는 고급차에 어울리는<br>
+				최고의 서비스를 제공합니다.</p>
+				<a href="https://www.bmw.co.kr/ko/topics/insights/corporation/overview.html">READ MORE<i class="fas fa-caret-right"></i></a>
+			</div>
+		</article>
+		<article id="model">
+			<div>
+				<h2>MODEL</h2>
+				<p>THE ALL-NEW BMW 7 SERIES.<br>
+				DRIVING LUXURY.</p>
+				<a href="https://www.bmw.co.kr/ko/all-models.html">READ MORE<i class="fas fa-caret-right"></i></a>
+			</div>
+		</article>
+		<article id="news">
+			<div>
+				<h2>NEWS</h2>
+				<p>2018 베이징 모터쇼에서<br>
+				iX3 콘셉트 공개</p>
+				<a href="https://www.bmw.co.kr/ko/topics/insights/news/news-2018-6.html">READ MORE<i class="fas fa-caret-right"></i></a>
+			</div>
+		</article>
+		<article id="careers">
+			<div>
+				<h2>CAREERS</h2>
+				<p>당신의 열정과 함께 BMW가 완성됩니다.</p>
+				<a href="https://www.bmw.co.kr/ko/topics/insights/careers/introduction.html">READ MORE<i class="fas fa-caret-right"></i></a>
+			</div>
+		</article>
+		<article id="contact">
+			<div>
+				<h2>CONTACT</h2>
+				<p>BMW와 관련하여 궁금하신 점은 <br>
+				언제든지 문의해주십시오.</p>
+				<a href="https://www.bmw.co.kr/ko/topics/general/contact.html">READ MORE<i class="fas fa-caret-right"></i></a>
+			</div>
+		</article>
+		<article id="portfolio">
+			<div>
+				<h2>PORTFOLIO</h2>
+				<p>BY SEOJIWON</p>
+				<a href="../index.html">READ MORE<i class="fas fa-caret-right"></i></a>
+			</div>
+			<footer>
+				<p><span>Name : </span>SEOJIWON | <span>E-mail : </span>gfdsa8817@gmail.com | <span>Tel : </span>010-8332-8817 | &copy; SJW 2018</p>
+			</footer>
+		</article>
+	</div>
+	<script>
+		$("article").children('div').animate({bottom:200},1000);
+		//마우스 휠 이벤트
+		$("article").mousewheel(function(event, delta){
+			if(delta > 0) {//마우스 휠을 올렸을 때
+				var prev = $(this).prev().offset().top;
+				$("html, body").stop().animate({"scrollTop":prev},1000);
+				$("article > div").css({'bottom':'1500px'});
+				// $("article div").css({'bottom':'-1500px'});
+				$(this).prev().children('div').animate({bottom:200},1500);
+				// $(this).prev().prev().children('div').animate({bottom:300},1500);
+			}else if(delta < 0) {//마우스 휠을 내렸을 때
+				var next = $(this).next().offset().top;
+				$("html, body").stop().animate({"scrollTop":next},1000);
+				$("article > div").css({'bottom':'-1500px'});
+				$(this).next().children('div').animate({bottom:200},1500);
+			}
+		});
+		// $("nav a").click(function(){
+		// 	$("article div").css({'bottom':'-1500px'});
+		// 	$("article").children('div').animate({bottom:250},1000);
+		// 	$("nav a").css("color","#fff");
+		// 	$(this).css("color","#333");
+		// });
+
+		$("html, body").stop().animate({scrollTop:0},500);
+	</script>
+</body>
+</html>

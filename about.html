@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>포트폴리오_서지원</title>
+	<link rel="stylesheet" href="common/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<style>
+
+		nav a:last-child{ text-decoration:line-through; }
+		
+		.contents > .about{ float:left; border:2px solid #8b3938; height:100%; box-sizing:border-box; overflow:hidden; position:relative; margin-left:30px; }
+		.contents > .about .info{ width:50%; font-size:14px; line-height:1.3; height:540px;  float:right; position:absolute; top:0; bottom:0; right:0; margin:auto; }
+		.contents > .about .info> div{ padding-left:10%;}
+		.contents > .about .info span{ display:inline-block; width:60px; }
+		.contents > .about .info p{ padding-left:10px; }
+
+		.contents > .about .info h3{ font-size:20px; line-height:1.5; margin-top:10px; }
+
+		.contents > .about .me{ width:50%; height:100%; position: relative; float:left; }
+		.contents > .about > .me img{ width:70%; position:absolute; top:0; bottom:0; right:0; margin:auto; }
+
+		@media screen and (max-width:1200px){
+			.contents > .about{ width:1035.89px; }
+
+		}
+
+		@media screen and (max-height:700px){
+			.contents > .about{ height:630px; }
+		}
+
+	</style>
+	<script src="common/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="common/jquery.mousewheel.min.js"></script>
+</head>
+<body>
+	<img class="flower" src="images/flower.png" alt="title">
+	<nav>
+		<a href="index.html">Project</a>
+		<a href="about.html">About</a>
+	</nav>
+	<div class="contents">
+		<img class="title" src="images/title.png" alt="title">
+		<div class="about">
+			<div class="me"><img src="images/img2.png" alt="img1"></div>
+			<div class="info">
+				<div class="profile">
+					<h3>Profile</h3>
+					<p>
+						<span>name</span>서지원<br>
+						<span>birth</span>1994년 1월 20일<br>
+						<span>mobile</span>010-8332-8817<br>
+						<span>e-mail</span>gfdsa8817@gmail.com
+					</p>
+				</div>
+				<div class="education">
+					<h3>Education</h3>
+					<p>
+						<span>2018.07</span>더조은컴퓨터아트학원<br>
+						<span></span>웹접근성 기반 스마트 UI/UX 디자인 제작 수료<br>
+						<span>2017.02</span>서울여자대학교 수학과 전공<br>
+						<span></span>(정보보호학과 복수전공)<br>
+						<span>2012.02</span>송탄고등학교 졸업
+					</p>
+				</div>
+				<div class="skill">
+					<h3>Skill</h3>
+					<p>
+						Photoshop<br>
+						Illustrator<br>
+						HTML<br>
+						Javascript<br>
+						C, C++, Java<br>
+
+					</p>
+				</div>
+				<div class="license">
+					<h3>License</h3>
+					<p>
+						정보처리기사<br>
+						GTQ 그래픽기술자격 1급<br>
+						리눅스마스터 2급<br>
+						컴퓨터활용능력 2급<br>
+						OA Master<br>
+						운전면허 1종 보통
+					</p>
+				</div>
+				
+				</div>
+
+			
+		</div>
+	</div>
+	<script>
+		var wid = $(window).width()-$('.title').width()-90;
+		$('.about').css('width',wid);
+		$(window).resize(function(){
+			var wid = $(window).width()-$('.title').width()-90;
+			$('.about').css('width',wid);
+
+		if(wid<=1035){
+			$('.about').css('width','1035px');
+			$('.contents').css('width','1200px');
+		}else{
+			var w = $(window).width();
+			$('.contents').css('width',w);
+		}
+
+		});
+		if(wid<=1035){
+			$('.about').css('width','1035px');
+			$('.contents').css('width','1200px');
+
+		}
+			
+	</script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Blackpink</title>
+		<meta name="description" content="A little library that can be used for creating WebGL powered distortion hover effects using displacement images." />
+		<meta name="keywords" content="webgl, hover, effect, distortion, displacement, web development, three.js" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script>
+			document.documentElement.className="js";
+			var supportsCssVars=function(){
+				var e,t=document.createElement("style");
+				return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};
+			supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+		</script>
+	</head>
+	<body class="loading">
+		<main>
+			<div class="message">Some message for mobile if needed.</div>
+			<div class="grid">
+				<div class="grid__item grid__item--bg theme-1">
+					<div class="grid__item-img" data-displacement="images/displacement/8.jpg" data-intensity="-0.65" data-speedIn="1.2" data-speedOut="1.2">
+						<img src="images/Img22.jpg" alt="Image"/>
+						<img src="images/Img21.jpg" alt="Image"/>
+					</div>
+				</div>
+				<div class="grid__item theme-2 grid__content">
+					<p>BLACKPINK MINI ALBUM</p>
+					<h3>SQUARE UP</h3>
+					<a href="http://www.ygfamily.co.kr/artist/Main.asp?LANGDIV=K&ATYPE=2&ARTIDX=70" target="_blank">VIEW MORE</a>
+				</div>
+
+				<div class="grid__item theme-3 grid__content">
+					<h3>'SQUARE UP'<br>
+					D-DAY POSTER</h3>
+					<p>#BLACKPINK#블랙핑크<br>
+					#20180615#6PM</p>
+					<a href="http://www.yg-life.com/archives/105438" target="_blank">VIEW MORE</a>
+				</div>
+				<div class="grid__item grid__item--bg theme-4">
+					<div class="grid__item-img" data-displacement="images/displacement/4.png" data-intensity="0.2" data-speedIn="1.6" data-speedOut="1.6">
+						<img src="images/Img24.jpg" alt="Image"/>
+						<img src="images/Img23.jpg" alt="Image"/>
+					</div>
+				</div>
+
+				<div class="grid__item grid__item--bg theme-5">
+					<div class="grid__item-img" data-displacement="images/displacement/1.jpg" data-intensity="-0.4" data-speedIn="0.7" data-speedOut="0.3" data-easing="Sine.easeOut">
+						<img src="images/Img1.jpg" alt="Image"/>
+						<img src="images/Img13.jpg" alt="Image Alt"/>
+					</div>
+				</div>
+				<div class="grid__item theme-6 grid__content">
+					<h3>BLACKPINK M/V<br>
+					'DDU-DU DDU-DU'</h3>
+					<p>#SQUAREUP#뚜두뚜두<br>
+					#20180615#6PM</p>
+					<a href="https://www.youtube.com/watch?v=vUALE5SitT0&feature=youtu.be" target="_blank">VIEW MORE</a>
+				</div>
+
+				<div class="grid__item theme-7 grid__content">
+					<h3>'SQUARE UP'<br>
+					JISOO POSTER</h3>
+					<p>#BLACKPINK#블랙핑크<br>
+					#JISOO#지수</p>
+					<a href="https://www.youtube.com/watch?v=NDA2sD9JFc4&feature=youtu.be" target="_blank">VIEW MORE</a>
+				</div>
+				<div class="grid__item grid__item--bg theme-8">
+					<div class="grid__item-img" data-displacement="images/displacement/7.jpg" data-intensity="0.9" data-speedIn="0.8" data-speedOut="0.4" data-easing="Circ.easeOut">
+						<img src="images/Img19.jpg" alt="Image"/>
+						<img src="images/Img20.jpg" alt="Image Alt"/>
+					</div>
+				</div>
+
+				<div class="grid__item grid__item--bg theme-9">
+					<div class="grid__item-img" data-displacement="images/displacement/10.jpg" data-intensity="0.7" data-speedIn="1" data-speedOut="0.5" data-easing="Power2.easeOut">
+						<img src="images/Img2.jpg" alt="Image"/>
+						<img src="images/Img3.jpg" alt="Image Alt"/>
+					</div>
+				</div>
+				<div class="grid__item theme-10 grid__content">
+					<h3>'SQUARE UP'<br>
+					JENNIE POSTER</h3>
+					<p>#BLACKPINK#블랙핑크<br>
+					#JENNIE#제니</p>
+					<a href="https://www.youtube.com/watch?v=JfS5IxIYw50&feature=youtu.be" target="_blank">VIEW MORE</a>
+				</div>
+
+				<div class="grid__item theme-11 grid__content">
+					<h3>'SQUARE UP'<br>
+					LISA POSTER</h3>
+					<p>#BLACKPINK#블랙핑크<br>
+					#LISA#리사</p>
+					<a href="https://www.youtube.com/watch?v=flPqsVWTnT0&feature=youtu.be" target="_blank">VIEW MORE</a>
+				</div>
+				<div class="grid__item grid__item--bg theme-12">
+					<div class="grid__item-img" data-displacement="images/displacement/6.jpg" data-intensity="0.6" data-speedIn="1.2" data-speedOut="0.5">
+						<img src="images/Img5.jpg" alt="Image"/>
+						<img src="images/Img4.jpg" alt="Image Alt"/>
+					</div>
+				</div>
+
+				<div class="grid__item grid__item--bg theme-13">
+					<div class="grid__item-img" data-displacement="images/displacement/11.jpg" data-intensity="0.4" data-speedIn="1" data-speedOut="1">
+						<img src="images/Img10.jpg" alt="Image"/>
+						<img src="images/Img6.jpg" alt="Image Alt"/>
+					</div>
+				</div>
+				<div class="grid__item theme-14 grid__content">
+					<h3>'SQUARE UP'<br>
+					ROSE POSTER</h3>
+					<p>#BLACKPINK#블랙핑크<br>
+					#ROSE#로제</p>
+					<a href="https://www.youtube.com/watch?v=kL1f09pdVa4&feature=youtu.be" target="_blank">VIEW MORE</a>
+				</div>
+
+				<div class="grid__item theme-15 grid__content">
+					<h3>BLACKPINK AREA<br>
+					'SQUARE UP'</h3>
+					<p>#CONCERTPOPUP<br>
+					#20180616#4PM#OPEN</p>
+					<a href="http://www.yg-life.com/archives/105372" target="_blank">VIEW MORE</a>
+				</div>
+				<div class="grid__item grid__item--bg theme-16">
+					<div class="grid__item-img" data-displacement="images/displacement/2.jpg" data-intensity="0.6" data-speedIn="1" data-speedOut="1">
+						<img src="images/Img11.jpg" alt="Image"/>
+						<img src="images/Img18.jpg" alt="Image Alt"/>
+					</div>
+				</div>
+
+				<div class="grid__item grid__item--bg theme-17">
+					<div class="grid__item-img" data-displacement="images/displacement/15.jpg" data-intensity="-0.1" data-speedIn="0.4" data-speedOut="0.4" data-easing="power2.easeInOut">
+						<img src="images/Img7.jpg" alt="Image"/>
+						<img src="images/Img14.jpg" alt="Image Alt"/>
+					</div>
+				</div>
+				<div class="grid__item theme-18 grid__content">
+					<h3>'SQUARE UP'<br>
+					TRACKLIST</h3>
+					<p>#뚜두뚜두#FOREVERYOUNG<br>
+					#REALLY#SEEYOULATER</p>
+					<a href="http://www.yg-life.com/archives/104724" target="_blank">VIEW MORE</a>
+				</div>
+				<div class="grid__item theme-19 grid__content">
+					<h3>PORTFOLIO</h3>
+					<p>#SEOJIWON#서지원<br>
+					#GFDSA8817@GMAIL.COM</p>
+					<a href="../index.html" target="_blank">VIEW MORE</a>
+				</div>
+				<div class="grid__item grid__item--bg theme-20">
+					<div class="grid__item-img" data-displacement="images/displacement/13.jpg" data-intensity="0.2">
+						<img src="images/Img8.jpg" alt="Image"/>
+						<img src="images/Img15.jpg" alt="Image Alt"/>
+					</div>
+				</div>
+				
+			</div>
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/three.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+		<script src="js/hover.js"></script>
+		<script>
+			imagesLoaded( document.querySelectorAll('img'), () => {
+				document.body.classList.remove('loading');
+			});
+
+			Array.from(document.querySelectorAll('.grid__item-img')).forEach((el) => {
+				const imgs = Array.from(el.querySelectorAll('img'));
+				new hoverEffect({
+					parent: el,
+					intensity: el.dataset.intensity || undefined,
+					speedIn: el.dataset.speedin || undefined,
+					speedOut: el.dataset.speedout || undefined,
+					easing: el.dataset.easing || undefined,
+					hover: el.dataset.hover || undefined,
+					image1: imgs[0].getAttribute('src'),
+					image2: imgs[1].getAttribute('src'),
+					displacementImage: el.dataset.displacement
+				});
+			});
+		</script>
+	</body>
+</html>

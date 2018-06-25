@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+body{ width:100%; }
+header{ background-color:#000; width:100%; overflow:hidden; }
+header video{ width:100%; min-width:1200px; }
+
+header nav{ width:1200px; margin:0 auto; overflow:hidden; background-color:#000; color:#fff; line-height:70px; }
+header nav img{ width:100px; margin:25px 50px 0 20px; float:left; }
+header nav ul:nth-of-type(1){ float:left; }
+header nav ul:nth-of-type(2){ float:right; }
+header nav ul li{ float:left; margin:0 20px; }
+header nav ul li a{ color:#fff; }
+header nav ul li a:hover{ text-decoration:underline; }
+
+article{ padding-bottom:50px; }
+article h2{ margin:100px auto 50px; font-size:30px; text-align:center; }
+article h3{ text-align:center; }
+
+button{ background:none; border:none; outline:none; }
+
+.bestseller{ width:1200px; overflow:hidden; margin:0 auto; }
+.bestseller div{ width:1080px; overflow:hidden; position:relative; height:500px; padding:0 60px; }
+.bestseller ul{ overflow:hidden; width:2580px; }
+.bestseller ul li{ float:left; width:340px; height:500px; margin:0 10px; background:#fafafa; }
+.bestseller ul li:nth-of-type(3){ margin:0 70px 0 10px; }
+.bestseller ul li p{ padding:20px 10px; line-height:1.2; font-size:16px; font-weight:bold; }
+.bestseller ul li p:nth-of-type(2){ padding:10px; display:inline-block; position:relative; width:320px;}
+.bestseller ul li span{ font-size:14px; font-weight:normal; }
+.bestseller ul li img{ width:340px; }
+.bestseller ul li button{ background:#000; color:#fff; padding:10px 20px; position:absolute; right:10px; }
+.bestseller div .btn{ position:absolute; line-height:500px; top:0; }
+.bestseller div .btn:nth-of-type(1){ left:0; }
+.bestseller div .btn:nth-of-type(2){ right:0; }
+
+.newcollection{ text-align:center; }
+.newcollection video{ width:500px; margin:50px; }
+.newcollection img:nth-of-type(1){ width:500px; margin:50px; }
+.newcollection img:nth-of-type(2){ width:1100px; margin:50px; }
+.newcollection a{ display:block; width:200px; height:50px; background:#000; border:1px solid #000; color:#fff; line-height:50px; margin:0 auto; }
+.newcollection a:hover{ background:#fff; color:#000; border:1px solid #000; }
+
+.collection{ width:100%; }
+.collection ul{ width:100%; overflow:hidden; margin:0 auto; }
+.collection ul li{ float:left; width:20%; }
+.collection ul li img{ width:100%; }
+
+.onlinebenefit{ text-align:center; position:relative; width:1200px; margin:0 auto; }
+.onlinebenefit img{ width:1200px; height:357px; }
+.onlinebenefit div{ position:absolute; bottom:150px; right:0; text-align:right; font-size:18px; line-height:1.4; }
+.onlinebenefit h3{ text-align:right; font-size:40px; font-weight:bold; }
+.onlinebenefit p{ margin-bottom:20px; }
+.onlinebenefit a{ background:#000; color:#fff; padding:10px 30px; border:1px solid #000; }
+.onlinebenefit a:hover{ background:#fff; color:#000; border:1px solid #000; }
+
+footer{ background:#000; color:#eee; padding:20px; line-height:1.5; font-size:14px;}
+footer p{ width:600px; margin:0 auto; }
+footer span{ padding:0 10px; }
+
+@media screen and (max-width:1200px){
+	header nav{ width:100%; }
+	.bestseller{ width:100%; }
+}
