@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" type="text/css">
 	<link rel="stylesheet" href="../common/reset.css">
 	<link rel="stylesheet" href="css/mac.css">
-	<script src="prefixfree.min.js"></script>
+	<script src="../common/jquery-3.3.1.min.js"></script>
 	
 </head>
 <body>
@@ -17,6 +17,7 @@
 			</video>
 		</div>
 		<nav>
+			<i class="fas fa-bars"></i>
 			<img src="images/logo.png" alt="로고">
 			<ul>
 				<li><a href="https://www.maccosmetics.co.kr/collections">신제품</a></li>
@@ -141,9 +142,58 @@
 			<a href="https://www.maccosmetics.co.kr/offer-details">자세히 보기</a>
 		</div>			
 	</article>
+	<article class="menu">
+		<ul>
+			<li>맥 스토어
+				<ul>
+					<li>매장안내</li>
+					<li>메이크업 서비스</li>
+				</ul>
+			</li>
+			<li>고객관리지원팀
+				<ul>
+					<li>CONTACT US</li>
+					<li>02-3440-2707</li>
+					<li>FAQS</li>
+					<li>배송정보</li>
+					<li>반품 및 교환</li>
+				</ul>
+			</li>
+			<li>ABOUT US
+				<ul>
+					<li>OUR STORY</li>
+					<li>맥 에이즈펀드</li>
+					<li>맥 프로 멤버쉽</li>
+					<li>나의 맥 셀렉트</li>
+					<li>백 투 맥</li>
+					<li>채용 정보</li>
+					<li>ANIMAL TESTING</li>
+				</ul>
+			</li>
+			<li>내 정보 및 주문관리
+				<ul>
+					<li>내 정보 확인 및 수정</li>
+					<li>주문 배송 조회</li>
+					<li>위시리스트</li>
+				</ul>
+			</li>
+			<li><i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i><i class="fab fa-instagram"></i><i class="fab fa-youtube"></i>
+				<ul>
+					<li>다른 지역 보기</li>
+					<li>지역 변경하기</li>
+				</ul>
+			</li>
+		</ul>
+	</article>
 	<footer>
 		<p><span>개인정보 처리방침</span><span>이용약관</span><span>위조제품 관련 안내</span>&copy; SJW 2018</span></p>
 		<p><span>Name : SEOJIWON</span> | <span>E-mail : gfdsa8817@gmail.com</span> | <span>Tel : 010-8332-8817</span></p>
 	</footer>
+
+	<script>
+		$('header > nav > i').click(function(){
+			$('header > nav').toggleClass('style');
+		});
+	</script>
 </body>
 </html>

@@ -7,12 +7,13 @@
 	<link rel="stylesheet" href="css/sub.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Gothic" type="text/css">
 	<style>
-		.image{ background-image:url(../images/bg2.jpg); }
-		.image img{ bottom:0; left:0; margin:30px 300px; color:#ddd; width:600px; }
-		.fonts section:nth-of-type(2) span{ font-family: 'BMDOHYEON_ttf', 'BMDoHyeon'; }
-		.color section:nth-of-type(1) div{ background-color:#ec9bac; }
-		.color section:nth-of-type(2) div{ background-color:#ffffff; outline:2px solid #ddd; }
-		.color section:nth-of-type(3) div{ background-color:#333333; }
+		@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto');
+
+		.wrap > div:nth-of-type(2) > .color > section:nth-of-type(1) > div{ background-color:#000; }
+		.wrap > div:nth-of-type(2) > .color > section:nth-of-type(2) > div{ background-color:#fff; }
+		.wrap > div:nth-of-type(2) > .color > section:nth-of-type(3) > div{ background-color:#ec9bac; }
+		.wrap > div:nth-of-type(2) > div > div .fonts section:nth-of-type(2){ font-family: 'Roboto', sans-serif; }
+		.wrap > div:nth-of-type(2) > div > div .fonts section:nth-of-type(2) span{ font-size:70px; }
 	</style>
 	<script src="prefixfree.min.js"></script>
 	
@@ -20,85 +21,82 @@
 <body>
 	<div class="wrap">
 		<header>
-			<img src="images/flower1.png" alt="왼쪽 꽃">
-			<h1>블랙핑크</h1>
-			<img src="images/flower2.png" alt="오른쪽 꽃">
+			<h1>Blackpink</h1>
 		</header>
-		<article class="image">
-			<img src="../blackpink/images/logo.png" alt="블랙핑크 로고">
+		<div>
+			<img src="../images/bg2.jpg" alt="블랙핑크 이미지">
+			<article class="project">
+				<section>
+					<h3>PROJECT TITLE</h3>
+					<p>블랙핑크</p>
+				</section>
+				<section>
+					<h3>CATEGORY</h3>
+					<p>앨범 홍보 페이지 디자인 &<br>
+					퍼블리싱</p>
+				</section>
+				<section>
+					<h3>PRODUCTION PERIOD</h3>
+					<p>2018.06.15~06.18</p>
+				</section>
+				<section>
+					<h3>LANGUAGE</h3>
+					<p>Html5 / CSS / J-Query /<br>
+						Photoshop</p>
+				</section>
+			</article>
+		</div>
+		<div>
+			<div>
+				<article class="concept">
+					<h3>CONCEPT</h3>
+					<p>이번에 새로 나온 블랙핑크의 미니 앨범인 'SQUARE UP'의 홍보 페이지로 한층 더 성숙하고 강해진 음악 컨셉에 맞게 화려한 페이지를 디자인하였다.</p>
+				</article>
+				<div>
+					<article class="fonts">
+						<h3>FONTS</h3>
+						<section>
+							<p>나눔 고딕</p>
+							<span>가나</span>
+						</section>
+						<section>
+							<p>Roboto</p>
+							<span>A a</span>
+						</section>
+					</article>
+					<article class="design">
+						<h3>DESIGN</h3>
+						<img src="images/blackpink_design.png" alt="블랙핑크 디자인">
+					</article>
+				</div>
+			</div>
+			<article class="color">
+				<h3>COLOR</h3>
+				<section>
+					<div></div>
+					<p>MAIN COLOR<br>
+					#000000</p>
+				</section>
+				<section>
+					<div></div>
+					<p>SUB COLOR<br>
+					#FFFFFF</p>
+				</section>			
+				<section>
+					<div></div>
+					<p>POINT COLOR<br>
+					#EC9BAC</p>
+				</section>
+			</article>		
+		</div>
+		<article class="publishing">
+			<h3>PUBLISHING</h3>
+			<p>플러그인을 이용해 이미지가 변하는 효과를 주었는데 다음에는 플러그인을 사용하지 않고 css나 제이쿼리를 이용해 효과를 주는 방법도 좋을 것 같다.</p>
 		</article>
-		<article class="project">
-			<section>
-				<h3>PROJECT TITLE</h3>
-				<p>블랙핑크</p>
-			</section>
-			<section>
-				<h3>CATEGORY</h3>
-				<p>앨범 홍보 페이지 디자인 & 퍼블리싱</p>
-			</section>
-			<section>
-				<h3>PRODUCTION PERIOD</h3>
-				<p>2018.06.15~06.18</p>
-			</section>
-			<section>
-				<h3>LANGUAGE</h3>
-				<p>웹표준 / Html5 / CSS / J-Query<br>
-					Photoshop</p>
-			</section>
-		</article>
-		<article class="story left">
-			<div class="title">STORY</div>
-			<section>
-				<h3>CONCEPT</h3>
-				<p>기존에 있던 스카이스캐너 페이지를 20, 30대 대상으로 하여 젊고 활기찬 느낌을 담고 있으면서 심플한 홈페이지로 리뉴얼 하는 것을 목표로 한다.</p>
-			</section>
-		</article>
-		<article class="fonts right">
-			<div class="title">FONTS</div>
-			<section>
-				<p>나눔 고딕</p>
-				<span>가나</span>
-			</section>
-			<section>
-				<p>배달의민족 도현</p>
-				<span>가나</span>
-			</section>
-		</article>
-		<article class="color left">
-			<div class="title">COLOR</div>
-			<section>
-				<div></div>
-				<p>MAIN COLOR</p>
-				<p>#00B2D5</p>
-			</section>
-			<section>
-				<div></div>
-				<p>SUB COLOR</p>
-				<p>#FFFFFF</p>
-			</section>			
-			<section>
-				<div></div>
-				<p>FONTS COLOR</p>
-				<p>#333333</p>
-			</section>
-		</article>
-		<article class="design right">
-			<div class="title">DESIGN</div>
-			<img src="images/skyscanner_design.png" alt="스카이스캐너 디자인">
-			<section>
-				<h3>ILLUSTRATION</h3>
-				<p>유명 랜드마크들을 일러스트로 작업하여 gif로 만들고 각 페이지에 포인트로 넣어주었다.</p>
-			</section>
-		</article>
-		<article class="publishing left">
-			<div class="title">PUBLISHING</div>
-			<section>
-				<h3>CODING</h3>
-				<p>항공권 검색 페이지의 배경은 animate를 이용해 시간이 지나면 배경 이미지가 바뀌도록 만들었고 각 페이지는 스크롤 효과를 주어 이동하는 것으로 작업하였다. 항공권 페이지만 작업을 하였는데 추후에 호텔 페이지와 렌터카 페이지도 개발하면 좋을 것 같다.</p>
-			</section>
-			<a href="../blackpink/blackpink.html">홈페이지로 바로가기</a>
-		</article>
-		<a href="../index.html">목록으로 돌아가기</a>
+		<div class="btnG">
+			<a href="../blackpink/blackpink.html" target="_blank">홈페이지로 바로가기</a>
+			<a href="../index.html" target="_blank">목록으로 돌아가기</a>
+		</div>
 	</div>
 </body>
 </html>

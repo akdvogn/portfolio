@@ -106,9 +106,9 @@ section article .txt a{ font-size:16px; color:#fff; border-bottom:1px solid #fff
 section article .txt a:hover{ font-weight:bold; }
 section article img{ position:absolute; }
 
-.kor{ bottom:90px; right:-3000px; width:300px; }
-.ita{ bottom:90px; right:-3000px; width:250px; }
-.usa{ bottom:90px; right:-3000px; width:150px; }
+.kor{ bottom:90px; right:-700px; width:300px; }
+.ita{ bottom:90px; right:-700px; width:250px; }
+.usa{ bottom:90px; right:-700px; width:150px; }
 
 footer{ width:100%; height:100%; background-color:#fff; color:#333; }
 footer > div{ width:780px; height:350px; padding-top:200px;  margin:0 auto; }

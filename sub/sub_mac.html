@@ -7,13 +7,13 @@
 	<link rel="stylesheet" href="css/sub.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Gothic" type="text/css">
 	<style>
-		.image{ background-image:url(../images/bg4.jpg); }
-		.image img{ bottom:0; right:0; left:0; margin:50px auto; width:300px; }
-		.fonts section:nth-of-type(2) span{ font-family: 'BMDOHYEON_ttf', 'BMDoHyeon'; }
-		.color section:nth-of-type(1) div{ background-color:#00b2d5; }
-		.color section:nth-of-type(2) div{ background-color:#ffffff; outline:2px solid #ddd; }
-		.color section:nth-of-type(3) div{ background-color:#333333; }
-		
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Nanum+Gothic');
+
+		.wrap > div:nth-of-type(2) > .color > section:nth-of-type(1) > div{ background-color:#000; }
+		.wrap > div:nth-of-type(2) > .color > section:nth-of-type(2) > div{ background-color:#fff; }
+		.wrap > div:nth-of-type(2) > .color > section:nth-of-type(3) > div{ background-color:#d3231e; }
+		.wrap > div:nth-of-type(2) > div > div .fonts section:nth-of-type(2){ font-family: 'Encode Sans Condensed', sans-serif; font-size:16px; }
+		.wrap > div:nth-of-type(2) > div > div .fonts section:nth-of-type(2) span{ font-size:70px; }
 	</style>
 	<script src="prefixfree.min.js"></script>
 	
@@ -21,82 +21,82 @@
 <body>
 	<div class="wrap">
 		<header>
-			<img src="images/flower1.png" alt="왼쪽 꽃">
 			<h1>MAC</h1>
-			<img src="images/flower2.png" alt="오른쪽 꽃">
 		</header>
-		<article class="image">
-			<img src="../mac/images/logo.png" alt="스카이스캐너 로고">
+		<div>
+			<img src="../images/bg4.jpg" alt="맥 이미지">
+			<article class="project">
+				<section>
+					<h3>PROJECT TITLE</h3>
+					<p>MAC</p>
+				</section>
+				<section>
+					<h3>CATEGORY</h3>
+					<p>화장품 쇼핑몰 페이지 디자인 &<br>
+					퍼블리싱</p>
+				</section>
+				<section>
+					<h3>PRODUCTION PERIOD</h3>
+					<p>2018.06.22~06.25</p>
+				</section>
+				<section>
+					<h3>LANGUAGE</h3>
+					<p>Html5 / CSS / J-Query /<br>
+						Photoshop</p>
+				</section>
+			</article>
+		</div>
+		<div>
+			<div>
+				<article class="concept">
+					<h3>CONCEPT</h3>
+					<p>맥에 어울리는 우아하고 고급스러운 느낌으로 홈페이지를 디자인 했고 쇼핑몰 홈페이지에 맞게 레이아웃 구성을 깔끔하게 만들었다.</p>
+				</article>
+				<div>
+					<article class="fonts">
+						<h3>FONTS</h3>
+						<section>
+							<p>나눔 고딕</p>
+							<span>가나</span>
+						</section>
+						<section>
+							<p>Encode Sans Condensed</p>
+							<span>A a</span>
+						</section>
+					</article>
+					<article class="design">
+						<h3>DESIGN</h3>
+						<img src="images/mac_design.png" alt="맥 디자인">
+					</article>
+				</div>
+			</div>
+			<article class="color">
+				<h3>COLOR</h3>
+				<section>
+					<div></div>
+					<p>MAIN COLOR<br>
+					#000000</p>
+				</section>
+				<section>
+					<div></div>
+					<p>SUB COLOR<br>
+					#FFFFFF</p>
+				</section>			
+				<section>
+					<div></div>
+					<p>SUB COLOR<br>
+					#D3231E</p>
+				</section>
+			</article>		
+		</div>
+		<article class="publishing">
+			<h3>PUBLISHING</h3>
+			<p>쇼핑몰 페이지를 데스크탑 버전, 태블릿 버전, 모바일 버전으로 볼 수 있도록 미디어 쿼리를 이용해 반응형으로 제작하였습니다.</p>
 		</article>
-		<article class="project">
-			<section>
-				<h3>PROJECT TITLE</h3>
-				<p>MAC</p>
-			</section>
-			<section>
-				<h3>CATEGORY</h3>
-				<p>웹페이지 디자인 & 퍼블리싱</p>
-			</section>
-			<section>
-				<h3>PRODUCTION PERIOD</h3>
-				<p>2018.06.22~06.25</p>
-			</section>
-			<section>
-				<h3>LANGUAGE</h3>
-				<p>웹표준 / Html5 / CSS / J-Query<br>
-					Photoshop / Illustrator</p>
-			</section>
-		</article>
-		<article class="story left">
-			<div class="title">STORY</div>
-			<section>
-				<p>기존에 있던 스카이스캐너 페이지를 20, 30대 대상으로 하여 젊고 활기찬 느낌을 담고 있으면서 심플한 홈페이지로 리뉴얼 하는 것을 목표로 한다.</p>
-			</section>
-		</article>
-		<article class="fonts right">
-			<div class="title">FONTS</div>
-			<section>
-				<p>나눔 고딕</p>
-				<span>가나</span>
-			</section>
-			<section>
-				<p>배달의민족 도현</p>
-				<span>가나</span>
-			</section>
-		</article>
-		<article class="color left">
-			<div class="title">COLOR</div>
-			<section>
-				<div></div>
-				<p>MAIN COLOR</p>
-				<p>#00B2D5</p>
-			</section>
-			<section>
-				<div></div>
-				<p>SUB COLOR</p>
-				<p>#FFFFFF</p>
-			</section>			
-			<section>
-				<div></div>
-				<p>FONTS COLOR</p>
-				<p>#333333</p>
-			</section>
-		</article>
-		<article class="design right">
-			<div class="title">DESIGN</div>
-			<!-- <img src="images/skyscanner_design.png" alt="스카이스캐너 디자인"> -->
-			<section>
-				<p>유명 랜드마크들을 일러스트로 작업하여 gif로 만들고 각 페이지에 포인트로 넣어주었다.</p>
-			</section>
-		</article>
-		<article class="publishing left">
-			<div class="title">PUBLISHING</div>
-			<section>
-				<p>항공권 검색 페이지의 배경은 animate를 이용해 시간이 지나면 배경 이미지가 바뀌도록 만들었고 각 페이지는 스크롤 효과를 주어 이동하는 것으로 작업하였다. 항공권 페이지만 작업을 하였는데 추후에 호텔 페이지와 렌터카 페이지도 개발하면 좋을 것 같다.</p>
-			</section>
-			<a href="../mac/mac.html">홈페이지로 바로가기</a>
-		</article>
-		<a href="../index.html">목록으로 돌아가기</a>
+		<div class="btnG">
+			<a href="../mac/mac.html" target="_blank">홈페이지로 바로가기</a>
+			<a href="../index.html" target="_blank">목록으로 돌아가기</a>
+		</div>
 	</div>
 </body>
 </html>
